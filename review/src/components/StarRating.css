@@ -1,0 +1,21 @@
+/* StarRating.css */
+
+.star-rating {
+    display: flex;
+    direction: row;
+  }
+  
+  .star-rating .on {
+    color: #ffc107;
+  }
+  
+  .star-rating .off {
+    color: #e4e5e9;
+  }
+  
+  .star-rating button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,15 @@
+/* Notification.css */
+
+.notification {
+    background-color: #4caf50; /* 성공 색상 */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .notification.error {
+    background-color: #f44336; /* 오류 색상 */
+  }
+  

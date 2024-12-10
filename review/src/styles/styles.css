@@ -1,0 +1,55 @@
+/* styles.css */
+
+/* 기본적인 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    color: #555;
+    margin-bottom: 20px; /* 제목 아래 간격 추가 */
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px; /* 컨테이너 패딩 증가 */
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form {
+    background-color: white;
+    padding: 30px; /* 폼 패딩 증가 */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* 폼 하단 간격 추가 */
+  }
+  
