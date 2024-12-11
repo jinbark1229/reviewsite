@@ -6,13 +6,12 @@ function Header() {
   return (
     <header>
       <nav>
-        <ul>
-          <li><Link to="/">홈</Link></li>
-          <li><Link to="/search">검색</Link></li>
-          <li><Link to="/login">로그인</Link></li>
-          <li><Link to="/signup">회원가입</Link></li>
-          <li><Link to="/profile">프로필</Link></li>
-        </ul>
+        <Link to="/">홈</Link>
+        <Link to="/login">로그인</Link>
+        <Link to="/signup">회원가입</Link>
+        <Link to="/search">검색</Link>
+        <Link to="/add-restaurant">맛집 추가</Link>
+        <Link to="/profile">프로필</Link>
       </nav>
     </header>
   );

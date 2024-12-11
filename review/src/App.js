@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ProfilePage from './pages/ProfilePage';
 import RestaurantDetail from './components/RestaurantDetail';
+import AddRestaurantPage from './pages/AddRestaurantPage'; // 추가된 라우트
 import './styles/styles.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/restaurants/:id" element={<RestaurantDetail />} />
+          <Route path="/add-restaurant" element={<AddRestaurantPage />} />
         </Routes>
       </div>
       <Footer />

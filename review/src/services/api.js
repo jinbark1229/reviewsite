@@ -91,3 +91,26 @@ export const getRestaurantById = async (id) => {
     return null;
   }
 };
+
+// 맛집 추가 요청
+export const addRestaurant = async (name, description, location) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/restaurants`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, description, location }),
+    });
+
+    if (!response.ok) {
+      throw new Error('맛집 추가 요청에 실패했습니다.');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('맛집 추가 중 오류 발생:', error);
+    return null;
+  }
+};

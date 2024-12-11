@@ -84,6 +84,26 @@ app.get('/api/auth/profile', (req, res) => {
   });
 });
 
+// 맛집 추가 엔드포인트
+app.post('/api/restaurants', (req, res) => {
+  const { name, description, location } = req.body;
+
+  if (!name || !description || !location) {
+    return res.status(400).json({ message: '모든 필드를 입력해주세요.' });
+  }
+
+  const sqlQuery = 'INSERT INTO restaurants (name, description, location) VALUES (?, ?, ?)';
+  const values = [name, description, location];
+
+  db.query(sqlQuery, values, (err, result) => {
+    if (err) {
+      return res.status(500).json({ message: '맛집 추가 중 오류가 발생했습니다.', error: err });
+    }
+    res.status(201).json({ message: '맛집 추가 성공', restaurantId: result.insertId });
+  });
+});
+
+
 app.use('/api/restaurants', restaurantRoutes);
 
 const port = 5000;
